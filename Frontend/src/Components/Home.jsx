@@ -17,6 +17,19 @@ export const Home = () => {
     .then((res)=>setData(res.data))
     .catch((err)=>console.log(err))
   },[]);
+  function handleDelete(_id){
+    return(
+      axios.delete(`http://localhost:4002/home/delete/${_id}`)
+      .then((res)=>{
+        setData(data.filter(item=>item._id!==_id));
+        window.location.reload();
+
+      })
+      .catch((err)=>{
+        console.log('Error deleting the data',err);
+      })
+    )
+  };
   return (
     <div>
          <TableContainer component={Paper}>
@@ -44,7 +57,9 @@ export const Home = () => {
               <TableCell>{row.salary}</TableCell>
               <TableCell>{row.department}</TableCell>
               <TableCell>{row.location}</TableCell>
-              <TableCell>  <button>Edit</button> <button>Delete</button>  </TableCell>
+              <TableCell>  <button >Edit</button> 
+              <button onClick={() => handleDelete(row._id)}>Delete</button>  
+              </TableCell>
 
             </TableRow>
           ))}
