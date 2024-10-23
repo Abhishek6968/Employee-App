@@ -26,8 +26,12 @@ export const Home = () => {
             <TableCell>ID</TableCell>
             <TableCell>Name</TableCell>
             <TableCell>Desgination</TableCell>
+            <TableCell>Salary</TableCell>
+
             <TableCell>Department</TableCell>
             <TableCell>Location</TableCell>
+            <TableCell>Actions</TableCell>
+
           
           </TableRow>
         </TableHead>
@@ -40,6 +44,8 @@ export const Home = () => {
               <TableCell>{row.salary}</TableCell>
               <TableCell>{row.department}</TableCell>
               <TableCell>{row.location}</TableCell>
+              <TableCell>  <button>Edit</button> <button>Delete</button>  </TableCell>
+
             </TableRow>
           ))}
         </TableBody>
