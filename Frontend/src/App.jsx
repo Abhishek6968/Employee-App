@@ -5,6 +5,7 @@ import './App.css'
 import { Navbar } from './Components/Navbar'
 import { Login } from './Components/Login'
 import { Home } from './Components/Home'
+import { Add } from './Components/Add'
 
 import {Route, Routes, Link } from 'react-router-dom';
 
@@ -16,6 +17,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/add" element={<Add />} />
+
           <Route path="/login" element={<Login />} />
         </Routes>
     </>

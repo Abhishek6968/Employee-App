@@ -8,6 +8,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { useNavigate } from 'react-router-dom';
 
 
 export const Home = () => {
@@ -30,6 +31,12 @@ export const Home = () => {
       })
     )
   };
+  const navigate=useNavigate()
+  function handleEdit(data){
+    return( navigate('/Add',{state:{data}})
+
+    )
+  }
   return (
     <div>
          <TableContainer component={Paper}>
@@ -57,7 +64,7 @@ export const Home = () => {
               <TableCell>{row.salary}</TableCell>
               <TableCell>{row.department}</TableCell>
               <TableCell>{row.location}</TableCell>
-              <TableCell>  <button >Edit</button> 
+              <TableCell>  <button onClick={()=>handleEdit(row)} >Edit</button> 
               <button onClick={() => handleDelete(row._id)}>Delete</button>  
               </TableCell>
 
