@@ -26,10 +26,10 @@ export const Navbar = () => {
           >
             Employee Application
           </Typography>
-          <Link to={'/'}><Button color="inherit" sx={{ fontWeight: 'bold', mx: 1 }}>Home</Button></Link>
+          <Link to={'/home'}><Button color="inherit" sx={{ fontWeight: 'bold', mx: 1 }}>Home</Button></Link>
           <Link to={'/add'}><Button color="inherit" sx={{ fontWeight: 'bold', mx: 1 }}>Add</Button></Link>
 
-          <Link to={'/login'}><Button color="inherit" variant="outlined" sx={{ fontWeight: 'bold', borderColor: 'white', mx: 1 }}>Login</Button></Link>
+          <Link to={'/'}><Button color="inherit" variant="outlined" sx={{ fontWeight: 'bold', borderColor: 'white', mx: 1 }}>Login</Button></Link>
         </Toolbar>
       </AppBar>
     </Box>  )
