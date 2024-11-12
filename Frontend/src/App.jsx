@@ -6,7 +6,8 @@ import { Navbar } from './Components/Navbar'
 import { Login } from './Components/Login'
 import { Home } from './Components/Home'
 import { Add } from './Components/Add'
-
+import { PrivateRoutes } from './Components/PrivateRoutes'
+import { Register } from './Components/Register'
 import {Route, Routes, Link } from 'react-router-dom';
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/reg" element={<Register />} />
+
           <Route path="/home" element={<Home />} />
           <Route path="/add" element={<Add />} />
 
