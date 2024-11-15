@@ -3,9 +3,7 @@
   "builds": [
     {
       "src": "frontend/package.json",
-      "use": "@vercel/next",
-      "buildCommand": "npm run build",
-      "outputDirectory": "build"
+      "use": "@vercel/react"
     },
     {
       "src": "backend/index.js",
